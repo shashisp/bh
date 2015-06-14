@@ -1,0 +1,1 @@
+web: gunicorn bookhunt.wsgi --log-file -
