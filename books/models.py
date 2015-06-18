@@ -30,3 +30,20 @@ class Vote(models.Model):
 
     def __unicode__(self):
         return "%s upvoted %s" % (self.voter.username, self.link.title)
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, unique=True, null=True)
+    bio = models.CharField(max_length=150)
+
+    def __unicode__(self):
+        return self.user.first_name
+
+
+class Collection(models.Model):
+    title = models.CharField(max_length=150)
+    created_by = models.ForeignKey(UserProfile)
+    books = models.ManyToManyField(Book)
+
+    def __uniocode__(self):
+        return self.title
