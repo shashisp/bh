@@ -6,5 +6,5 @@ class BookResource(ModelResource):
     class Meta:
         queryset = Book.objects.all()
         resource_name = 'book'
-        allowed_methods = ['post', 'get', 'patch', 'delete']
+        allowed_methods = ['post', 'get', 'delete']
         always_return_data = True
