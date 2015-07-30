@@ -1,10 +1,13 @@
-<!doctype html lang="en">
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>BookHunt</title>
-	
-	<link href="/static/style.css" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootswatch: Flatly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="http://bootswatch.com/assets/css/bootswatch.min.css">
+   
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.7/angular-resource.js"></script>
 
@@ -13,36 +16,44 @@
            
                     <script type="text/javascript" src="/static/js/controllers.js"></script>
                     <script type="text/javascript" src="/static/js/services.js"></script>
+  </head>
 
-	<style>
-	body {
-		margin-top: 100px;
-	}
-	.banner {
-		text-align: center;
-	}
-	.owl {
-		max-width:100% !important;
-		height:auto;
-		display:block;
-	}
-	</style>
-</head>
 <body>
 
-	<div class='navbar fixed'>
-		<div class='container'>
-			<h4 class='pull-left'>Bookhunt</h4>
-			<ul class='pull-right'>
-				<li><a href="/create" class="button small success">+submit</a></li>
-				<li><a href='/about'>About</a></li>
-			</ul>
-		</div>
-	</div>
-	
-	{% block content %}
-    {% endblock %}      
-	
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="./" class="navbar-brand"><img src="http://bootswatch.com/assets/img/logo-nav.png">Bookhunt</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
 
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" target="_blank">Submit</a></li>
+            <li><a href="#" target="_blank">Collections</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="page-header" id="banner">
+        <div class="row">
+          {% block content %}
+          {% endblock %}
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+	
 </body>
 </html>
